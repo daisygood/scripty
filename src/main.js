@@ -31,11 +31,7 @@ class Scripty extends Component {
 
   renderScene(route, navigator) {
     var Page = Routes[route.name];
-    if ( route.name === 'lesson') {
-      return <Lesson navigator={navigator} {...route.passProps} />
-    } else {
-      return <Page navigator = {navigator}/>
-    }
+    return <Page navigator = {navigator} {...route.passProps}/>
   }
 
   render() {
